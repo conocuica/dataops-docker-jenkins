@@ -8,11 +8,11 @@ pipeline {
             }
         }
 
-        stage('Run Container') {
-            steps {
-                sh 'docker run --rm -v $PWD:/app comisiones-app'
-            }
-        }
+		stage('Run Container') {
+			steps {
+				sh 'docker run --rm comisiones-app'
+			}
+		}
 
         stage('Verify Artifact') {
             steps {
