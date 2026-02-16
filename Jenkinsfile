@@ -10,7 +10,7 @@ pipeline {
 
 		stage('Run Container') {
 			steps {
-				sh 'docker run --rm -v $PWD:/workspace comisiones-app'
+				sh 'docker run --rm comisiones-app'
 			}
 		}
 		
@@ -19,12 +19,7 @@ pipeline {
                 sh 'ls -lh'
             }
         }
-		
-        stage('Archive Artifact') {
-            steps {
-                archiveArtifacts artifacts: 'comisiones.xlsx', fingerprint: true
-            }
-        }		
+
     }
 
     post {
