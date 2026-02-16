@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 data = {
     "Empleado": ["Ana", "Luis", "Carlos"],
